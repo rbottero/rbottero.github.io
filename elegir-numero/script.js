@@ -19,6 +19,10 @@ const flashRojo = function () {
   document.body.style.background = 'rgb(161, 11, 11)';
 };
 
+//          GUARDA EL NÚMERO EN LA MEMORIA
+// document.querySelector('.highscore').textContent =
+//   localStorage.getItem('someVarKey');
+
 /////////////////////////
 //////BOTÓN AGAIN///////
 ///////////////////////
@@ -27,6 +31,12 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.number').textContent = '?';
   document.querySelector('.score').textContent = 20;
   document.body.style.background = 'rgb(34,34,34)';
+  document.querySelector('.guess').value = '';
+  document.querySelector('.message').textContent = 'Comenzar...';
+  localStorage.setItem(
+    'someVarKey',
+    document.querySelector('.highscore').textContent
+  );
 });
 
 /////////////////////////
@@ -34,7 +44,6 @@ document.querySelector('.again').addEventListener('click', function () {
 ///////////////////////
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
-
   if (!guess || guess <= 0) {
     document.querySelector('.message').textContent =
       'Prueba con un número positivo.';
