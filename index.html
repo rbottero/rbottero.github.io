@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/style-switcher.css" />
     <link rel="stylesheet" href="css/skins/color-1.css" />
   </head>
-  <body>
+  <body class="dark">
     <!-- Main contenedor -->
     <div class="main-container">
       <!-- Aside comienzo -->
@@ -32,9 +32,9 @@
           <li>
             <a href="#about"><i class="fa fa-user"></i>Sobre mí</a>
           </li>
-          <li>
+          <!-- <li>
             <a href="#services"><i class="fa fa-list"></i>Servicios</a>
-          </li>
+          </li> -->
           <li>
             <a href="#portfolio"><i class="fa fa-briefcase"></i>Proyectos</a>
           </li>
@@ -47,8 +47,7 @@
       <!-- Contenido principal comienzo -->
       <div class="main-content">
         <!-- Inicio Home -->
-        <section class="home section" id="home">
-          Inicio
+        <section class="home active section" id="home">
           <div class="container">
             <div class="row">
               <div class="home-info padd-15">
@@ -65,7 +64,7 @@
                   a posuere pretium. Proin sem massa, feugiat id ornare sit
                   amet, molestie quis ante.
                 </p>
-                <a href="#contacto" class="btn hire-me">Más sobre mí</a>
+                <a href="#" class="btn">Descargar mi CV</a>
               </div>
               <div class="home-img"><img src="images/hero.webp" alt="" /></div>
             </div>
@@ -84,7 +83,9 @@
               <div class="about-content padd-15">
                 <div class="row">
                   <div class="about-text padd-15">
-                    <h3>Soy Rodrigo Bottero y <span>desarollador web</span></h3>
+                    <h3>
+                      Soy Rodrigo Bottero y me encanta <span>aprender</span>
+                    </h3>
                     <p>
                       Praesent purus metus, ultricies et leo sit amet, pretium
                       tempus sapien. Aenean tincidunt velit eu risus ultricies
@@ -112,63 +113,67 @@
                       <div class="info-item padd-15">
                         <p>Email: <span>rodrigobottero@gmail.com</span></p>
                       </div>
-                      <div class="info-item padd-15">
+                      <!-- <div class="info-item padd-15">
                         <p>Título: <span>Math</span></p>
-                      </div>
+                      </div> -->
                       <div class="info-item padd-15">
                         <p>Teléfono: <span>+598 098 992 700</span></p>
                       </div>
                       <div class="info-item padd-15">
                         <p>Ciudad: <span>Montevideo</span></p>
                       </div>
-                      <div class="info-item padd-15">
+                      <!-- <div class="info-item padd-15">
                         <p>Freelancer: <span>Disponible</span></p>
-                      </div>
+                      </div> -->
                     </div>
                     <div class="row">
                       <div class="buttons padd-15">
-                        <a href="#" class="btn">Descargar mi CV</a>
-                        <a href="#contacto" class="btn hire-me">Contratame</a>
+                        <a
+                          href="#contact"
+                          data-section-index="1"
+                          class="btn hire-me"
+                          >Contactame</a
+                        >
                       </div>
                     </div>
                   </div>
                   <div class="skills padd-15">
                     <div class="row">
                       <div class="skill-item padd-15">
-                        <h5>CSS</h5>
+                        <h5>HTML & CSS</h5>
                         <div class="progress">
-                          <div class="progress-in" style="width: 76%"></div>
-                          <div class="skill-percent">76%</div>
+                          <div class="progress-in" style="width: 75%"></div>
+                          <div class="skill-percent">75%</div>
                         </div>
                       </div>
                       <div class="skill-item padd-15">
                         <h5>JS</h5>
                         <div class="progress">
-                          <div class="progress-in" style="width: 86%"></div>
-                          <div class="skill-percent">86%</div>
+                          <div class="progress-in" style="width: 65%"></div>
+                          <div class="skill-percent">65%</div>
                         </div>
                       </div>
                       <div class="skill-item padd-15">
-                        <h5>PHP</h5>
+                        <h5>Python</h5>
                         <div class="progress">
-                          <div class="progress-in" style="width: 66%"></div>
-                          <div class="skill-percent">66%</div>
+                          <div class="progress-in" style="width: 50%"></div>
+                          <div class="skill-percent">50%</div>
                         </div>
                       </div>
                       <div class="skill-item padd-15">
-                        <h5>HTML</h5>
+                        <h5>RStudio</h5>
                         <div class="progress">
-                          <div class="progress-in" style="width: 96%"></div>
-                          <div class="skill-percent">96%</div>
+                          <div class="progress-in" style="width: 70%"></div>
+                          <div class="skill-percent">70%</div>
                         </div>
                       </div>
-                      <div class="skill-item padd-15">
+                      <!-- <div class="skill-item padd-15">
                         <h5>Bootstrap</h5>
                         <div class="progress">
                           <div class="progress-in" style="width: 76%"></div>
                           <div class="skill-percent">76%</div>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -182,8 +187,8 @@
                           <div class="timeline-item">
                             <div class="circle-dot"></div>
                             <h3 class="timeline-date">
-                              <i class="fa fa-calendar"></i> 2013-2015
-                              <h4 class="timeline-title">Master en X</h4>
+                              <i class="fa fa-calendar"></i> 2024
+                              <h4 class="timeline-title">Otra formación</h4>
                               <p class="timeline-text">
                                 Praesent erat diam, feugiat et tellus sit amet,
                                 efficitur pretium magna. Vestibulum ante ipsum
@@ -197,8 +202,10 @@
                           <div class="timeline-item">
                             <div class="circle-dot"></div>
                             <h3 class="timeline-date">
-                              <i class="fa fa-calendar"></i> 2013-2015
-                              <h4 class="timeline-title">Master en X</h4>
+                              <i class="fa fa-calendar"></i> 2019-Actual
+                              <h4 class="timeline-title">
+                                Licenciatura en matemáticas
+                              </h4>
                               <p class="timeline-text">
                                 Praesent erat diam, feugiat et tellus sit amet,
                                 efficitur pretium magna. Vestibulum ante ipsum
@@ -209,7 +216,7 @@
                             </h3>
                           </div>
                           <!-- Item Línea de tiempo -->
-                          <div class="timeline-item">
+                          <!-- <div class="timeline-item">
                             <div class="circle-dot"></div>
                             <h3 class="timeline-date">
                               <i class="fa fa-calendar"></i> 2013-2015
@@ -222,11 +229,10 @@
                                 sem a, tincidunt luctus dui.
                               </p>
                             </h3>
-                          </div>
+                          </div> -->
                         </div>
                       </div>
                     </div>
-                    asd
                   </div>
                   <div class="experience padd-15">
                     <h3 class="title">Experiencia</h3>
@@ -237,8 +243,8 @@
                           <div class="timeline-item">
                             <div class="circle-dot"></div>
                             <h3 class="timeline-date">
-                              <i class="fa fa-calendar"></i> 2013-2015
-                              <h4 class="timeline-title">Master en X</h4>
+                              <i class="fa fa-calendar"></i> 2024-Actual
+                              <h4 class="timeline-title">Alorica</h4>
                               <p class="timeline-text">
                                 Praesent erat diam, feugiat et tellus sit amet,
                                 efficitur pretium magna. Vestibulum ante ipsum
@@ -252,8 +258,8 @@
                           <div class="timeline-item">
                             <div class="circle-dot"></div>
                             <h3 class="timeline-date">
-                              <i class="fa fa-calendar"></i> 2013-2015
-                              <h4 class="timeline-title">Master en X</h4>
+                              <i class="fa fa-calendar"></i> 2022-2024
+                              <h4 class="timeline-title">UdelaR</h4>
                               <p class="timeline-text">
                                 Praesent erat diam, feugiat et tellus sit amet,
                                 efficitur pretium magna. Vestibulum ante ipsum
@@ -264,7 +270,7 @@
                             </h3>
                           </div>
                           <!-- Item Línea de tiempo -->
-                          <div class="timeline-item">
+                          <!-- <div class="timeline-item">
                             <div class="circle-dot"></div>
                             <h3 class="timeline-date">
                               <i class="fa fa-calendar"></i> 2013-2015
@@ -277,7 +283,7 @@
                                 sem a, tincidunt luctus dui.
                               </p>
                             </h3>
-                          </div>
+                          </div> -->
                         </div>
                       </div>
                     </div>
@@ -415,7 +421,9 @@
               <div class="portfolio-item padd-15">
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-img">
-                    <img src="images/portfolio-1.webp" alt="" />
+                    <a href="https://rbottero.github.io/juego-dados/index.html"
+                      ><img src="images/portfolio-1.png" alt="Juego de dados"
+                    /></a>
                   </div>
                 </div>
               </div>
@@ -424,7 +432,11 @@
               <div class="portfolio-item padd-15">
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-img">
-                    <img src="images/portfolio-1.webp" alt="" />
+                    <a
+                      href="https://rbottero.github.io/elegir-numero/index.html"
+                    >
+                      <img src="images/portfolio-2.png" alt="Adivina el número"
+                    /></a>
                   </div>
                 </div>
               </div>
@@ -478,7 +490,7 @@
               </div>
             </div>
             <h3 class="contact-title padd-15">¿Alguna pregunta?</h3>
-            <h4 class="contact-sub-title padd-15">Estoy a tu disposición</h4>
+            <h4 class="contact-sub-title padd-15">Estoy a las órdenes</h4>
             <div class="row">
               <!-- Información de contacto inicio item -->
               <div class="contact-info-item">
@@ -486,7 +498,7 @@
                   <i class="fa fa-phone"></i>
                 </div>
                 <h4>Llamame</h4>
-                <p>+598 098 992 700</p>
+                <p>+598 091 234 567</p>
               </div>
               <!-- Fin Información de contacto item -->
               <!-- Información de contacto inicio item -->
@@ -518,9 +530,7 @@
               <!-- Fin Información de contacto item -->
             </div>
             <h3 class="contact-title padd-15">Envíame un email</h3>
-            <h4 class="contact-sub-title padd-15">
-              Siempre respondo los mensajes
-            </h4>
+            <h4 class="contact-sub-title padd-15">¡Respondo rápido!</h4>
             <!-- Formulario contacto inicio -->
             <div class="row">
               <div class="contact-form padd-15">
