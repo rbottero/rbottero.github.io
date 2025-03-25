@@ -301,6 +301,19 @@ h3.my-profession {
   max-width: 40%;
   text-align: center;
   position: relative;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 9px rgb(255, 255, 255/ 30%);
+  justify-self: center;
+  animation: profile-animate 8s ease-in-out infinite 1s;
+  /* height: 300px; */
+  width: 3000px;
+  background: url(../images/hero.png);
+}
+@keyframes profile-animate{
+  0% {border-radius: 60% 40% 30% 70%/60% 30% 70% 40%};
+  50% {border-radius: 30% 60% 70% 40%/50% 60% 30% 60%};
+  100% {border-radius: 60% 40% 30% 70%/60% 30% 70% 40%};
+
 }
 .home-img::before {
   content: "";
