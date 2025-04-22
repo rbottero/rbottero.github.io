@@ -1,0 +1,218 @@
+.gallery {
+  padding-bottom: 0;
+}
+
+.gallery-container {
+  column-count: 3;
+  column-gap: 1.5rem;
+}
+
+.gallery-item {
+  border-radius: 3rem 3rem 3rem 0;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  inset: 0.5rem;
+  background-color: var(--first-color);
+  border-radius: inherit;
+}
+
+.gallery-item::before,
+.gallery-link {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.gallery-item:hover::before {
+  opacity: 0.9;
+  visibility: visible;
+}
+
+.gallery-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: var(--white-color);
+  font-size: 3rem;
+  transition: transform 0.5s;
+}
+
+.gallery-item:hover {
+  cursor: pointer;
+}
+
+.gallery-item:hover .gallery-link {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Modal y overwrites */
+.gallery-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: var(--white-color);
+  font-size: 3rem;
+  transition: transform 0.5s;
+  cursor: pointer; /* Asegurarse de que sea clickeable */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Estilos para el modal de la galería */
+.gallery-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.gallery-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-modal-image {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+
+.gallery-modal-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-modal-close:hover {
+  color: var(--first-color);
+}
+
+/* Estilos para el carrusel */
+.gallery-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+.gallery-carousel-arrow:hover {
+  background-color: var(--first-color);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-carousel-arrow svg {
+  font-size: 30px;
+}
+
+.gallery-carousel-arrow-left {
+  left: 20px;
+}
+
+.gallery-carousel-arrow-right {
+  right: 20px;
+}
+
+/* Estilos para las miniaturas */
+.gallery-thumbnails-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.gallery-thumbnail {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.gallery-thumbnail:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.gallery-thumbnail.active-gallery-thumbnail {
+  border-color: var(--first-color);
+  opacity: 1;
+}
+
+.gallery-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .gallery-thumbnails-container {
+    gap: 5px;
+  }
+
+  .gallery-thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+
+  .gallery-carousel-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gallery-carousel-arrow svg {
+    font-size: 24px;
+  }
+}
